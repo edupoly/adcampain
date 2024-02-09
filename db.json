@@ -1,0 +1,87 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "email": "praveen@edupoly.com",
+      "password": 123,
+      "username": "praveen",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "nani@edupoly.com",
+      "password": 123,
+      "username": "nani",
+      "role": "campaigner"
+    },
+    {
+      "id": 3,
+      "email": "balu@edupoly.com",
+      "password": 123,
+      "username": "balu",
+      "role": "campaigner"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "d5b8",
+      "title": "reacths traubgub",
+      "description": "sdfsdf",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/240px-React_Logo_SVG.svg.png",
+      "link": "http://localhost:3000/adRegistration",
+      "date": 1707453776970
+    },
+    {
+      "id": "12f2",
+      "title": "ANgular Training",
+      "description": "sdkfjh",
+      "imgUrl": "https://en.wikipedia.org/wiki/AngularJS#/media/File:AngularJS_logo.svg",
+      "link": "http://localhost:3000/adRegistration",
+      "date": 1707456022908
+    },
+    {
+      "id": "a5b8",
+      "title": "Java Fullstack Training",
+      "description": "Placement oriented indepth training on Java with Frontend",
+      "imgUrl": "https://technogeekscs.com/wp-content/uploads/2023/11/Java-training-institute-.jpg",
+      "link": "http://localhost:3000/adRegistration",
+      "date": 1707458556485
+    }
+  ],
+  "registrations": [
+    {
+      "id": "ff41",
+      "name": "naveen",
+      "phone": "3344",
+      "campaigner": "balu",
+      "date": 1707456812234
+    }
+  ]
+}
