@@ -9,8 +9,23 @@ export const jsonApi = createApi({
     checkUser: builder.query({
       query: (values) => `users/?username=${values.username}&password=${values.password}`,
     }),
+    getAllCampainersFromUsers: builder.query({
+      query: () => `users/?role=campaigner`,
+    }),
     getAllCampaings:builder.query({
       query:()=>`campaigns`
+    }),
+    getAllRegistrations:builder.query({
+      query:()=>`registrations`
+    }),
+    getAllRegistrationMembersByCam:builder.query({
+      query:(rname)=>`registrations/?campaigner=${rname}`
+    }),
+    getRegisterByCourse:builder.query({
+      query:(values)=>`registrations/?course=${values}`
+    }),
+    getGoogleUsers:builder.query({
+      query:(values)=>`users/?email=${values}`
     }),
     addCampaign:builder.mutation({
       query:(newCampaign)=>{
@@ -29,10 +44,40 @@ export const jsonApi = createApi({
           body:newregistration
         }
       }
+    }),
+    adCampaignersThroughGlg:builder.mutation({
+      query:(newregistration)=>{
+        return {
+          method:"POST",
+          url:`/users`,
+          body:newregistration
+        }
+      }
+    }),
+    updateUserDetails:builder.mutation({
+      query:(newregistration)=>{
+        return {
+          method:"PUT",
+          url:`/users/${newregistration.id}`,
+          body:newregistration
+        }
+      }
     })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useAdRegistrationMutation,useLazyCheckUserQuery,useAddCampaignMutation,useGetAllCampaingsQuery } = jsonApi
+export const {
+   useAdRegistrationMutation,
+   useLazyCheckUserQuery,
+   useAddCampaignMutation,
+   useGetAllCampaingsQuery,
+   useGetAllRegistrationsQuery,
+   useLazyGetRegisterByCourseQuery,
+   useGetAllCampainersFromUsersQuery,
+   useLazyGetAllRegistrationMembersByCamQuery,
+   useLazyGetGoogleUsersQuery,
+   useAdCampaignersThroughGlgMutation,
+   useUpdateUserDetailsMutation,
+   } = jsonApi

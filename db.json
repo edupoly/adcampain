@@ -1,76 +1,70 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "a title",
-      "views": 100
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "views": 200
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "praveen@edupoly.com",
       "password": 123,
       "username": "praveen",
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "nani@edupoly.com",
       "password": 123,
       "username": "nani",
-      "role": "campaigner"
+      "role": "campaigner",
+      "phone": 8184829256,
+      "photoUrl": "blob:http://localhost:3000/57d8ee26-8e06-4aee-bb72-9edf485f1d1a"
     },
     {
-      "id": 3,
+      "id": "3",
       "email": "balu@edupoly.com",
       "password": 123,
       "username": "balu",
-      "role": "campaigner"
+      "role": "campaigner",
+      "phone": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "2cb9",
+      "username": "Naresh Nenavath",
+      "email": "nenavathnaresh460@gmail.com",
+      "phone": 9666654222,
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLgMz8hvxdr-iB9cvPWu8UIa9y8vF-a_6_Zmfedxpr1YB0=s96-c",
+      "role": "campaigner",
+      "password": "123"
     }
   ],
   "campaigns": [
     {
       "id": "d5b8",
-      "title": "reacths traubgub",
-      "description": "sdfsdf",
+      "title": "ReactJS Training",
+      "description": "We Provide Industry Ready Corporate Training and upskilling professionals.",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/240px-React_Logo_SVG.svg.png",
       "link": "http://localhost:3000/adRegistration",
       "date": 1707453776970
     },
     {
-      "id": "12f2",
-      "title": "ANgular Training",
-      "description": "sdkfjh",
-      "imgUrl": "https://en.wikipedia.org/wiki/AngularJS#/media/File:AngularJS_logo.svg",
+      "id": "d5b6",
+      "title": "Angular Training",
+      "description": "We Provide Industry Ready Corporate Training and upskilling professionals.",
+      "imgUrl": "https://cdn.sanity.io/images/3do82whm/next/414391f26df8b205764c8fe789fbbede079f205d-1000x667.png?w=720&h=480&fit=clip&auto=format",
       "link": "http://localhost:3000/adRegistration",
-      "date": 1707456022908
+      "date": 1707453776970
     },
     {
-      "id": "a5b8",
+      "id": "a5b7",
       "title": "Java Fullstack Training",
       "description": "Placement oriented indepth training on Java with Frontend",
       "imgUrl": "https://technogeekscs.com/wp-content/uploads/2023/11/Java-training-institute-.jpg",
+      "link": "http://localhost:3000/adRegistration",
+      "date": 1707458556485
+    },
+    {
+      "id": "a5b9",
+      "title": "Python Fullstack Training",
+      "description": "Placement oriented indepth training on Java with Frontend",
+      "imgUrl": "https://img-c.udemycdn.com/course/750x422/4341188_4d15_2.jpg",
       "link": "http://localhost:3000/adRegistration",
       "date": 1707458556485
     }
@@ -79,9 +73,87 @@
     {
       "id": "ff41",
       "name": "naveen",
-      "phone": "3344",
+      "phone": "3344556677",
+      "course": "ReactJS Training",
       "campaigner": "balu",
       "date": 1707456812234
+    },
+    {
+      "id": "dab0",
+      "name": "naresh",
+      "phone": "8184829256",
+      "course": "Python Fullstack Training",
+      "campaigner": "nani",
+      "date": 1707475267280
+    },
+    {
+      "id": "dab1",
+      "name": "suresh",
+      "phone": "9666554442",
+      "course": "Angular Training",
+      "campaigner": "balu",
+      "date": 1707475267280
+    },
+    {
+      "id": "dab2",
+      "name": "divya",
+      "phone": "8184829256",
+      "course": "Java Fullstack Training",
+      "campaigner": "nani",
+      "date": 1707475267280
+    },
+    {
+      "id": "dab3",
+      "name": "siddu",
+      "phone": "9666654222",
+      "course": "ReactJS Training",
+      "campaigner": "balu",
+      "date": 1707475267280
+    },
+    {
+      "id": "c8a8",
+      "name": "suresh",
+      "phone": "9666554442",
+      "course": "ReactJS Training",
+      "campaigner": "praveen",
+      "email": "sureshraina74877@gmail.com",
+      "date": 1707980381700
+    },
+    {
+      "id": "dccd",
+      "name": "murari",
+      "phone": "9666554442",
+      "course": "ReactJS Training",
+      "campaigner": "praveen",
+      "email": "murari.t2001@gmail.com",
+      "date": 1707980381700
+    },
+    {
+      "id": "fab0",
+      "name": "Sindhu",
+      "phone": "9666554442",
+      "course": "Frontend with Rwact.Js DevOps",
+      "campaigner": "praveen",
+      "email": "sindhu09.dev@gmail.com",
+      "date": 1707980381700
+    },
+    {
+      "id": "410f",
+      "name": "Shy",
+      "phone": "+918184829256",
+      "course": "Python Fullstack Training",
+      "campaigner": "Naresh Nenavath",
+      "email": "nenavathnaresh460@gmail.com",
+      "date": 1707981036258
+    },
+    {
+      "id": "16d0",
+      "name": "Sindhu",
+      "phone": "+918184829256",
+      "course": "ReactJS Training",
+      "campaigner": "Naresh Nenavath",
+      "email": "sindhu09.dev@gmail.com",
+      "date": 1708064956869
     }
   ]
 }

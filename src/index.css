@@ -1,0 +1,88 @@
+li{
+    list-style: none;
+}
+.card{
+    height: 450px;
+   
+}
+.card-img-top{
+    height: 250px;  
+}
+.wdli{
+    width: 30%;
+}
+.cardbtn{
+    width: 50%;
+}
+.admindb{
+    background-image: url(https://cutewallpaper.org/21/nature-photography-wallpapers/Free-download-Close-Images-Nature-Photography-desktop-.jpg);
+    height: 89.7vh;
+    background-size: cover;
+}
+.adminhead{
+    text-transform: uppercase;
+    text-shadow: 15px 15px 10px black;
+    color: rgb(238, 232, 232);
+    text-decoration: underline;
+    letter-spacing: 5px;
+}
+#file{
+    display: none;
+}
+.personicon{
+    font-size: 60px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom:5px;
+}
+.editpic{
+    border-radius: 50%;
+}
+.leafbtn{
+    background-color: green;
+    border-radius: 40px 15px 40px  0px; 
+    padding: 10px;
+    border: 0px;
+    margin: 10px;
+}
+.ready{
+    border: 2px dashed ;
+    background-color: #ffd0b5;
+    margin: 10px;
+}
+.set{
+    border: 2px dotted;
+    background-color: #fab8d9;
+    margin: 10px;
+    border-radius: 5px;
+}
+.go{
+    border-radius: 50%;
+    border-color: green;
+    height: 50px;
+    width: 50px;
+    
+    margin: 10px;
+}
+
+@media(max-width:800px){
+    .wdli{
+        width: 45%;
+    }
+    .cardbtn{
+        width: 100%;
+    }
+    .card{
+        height: 500px   ;
+    }
+}
+
+@media(max-width:460Px){
+    .wdli{
+        width: 97%;
+    }
+    .cardbtn{
+        width: 100%;
+    }
+}

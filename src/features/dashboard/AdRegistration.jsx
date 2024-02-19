@@ -3,36 +3,58 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik'
 import { useAdRegistrationMutation, useAddCampaignMutation } from '../../services/jsonApi';
 import { useParams } from 'react-router-dom';
+import emailjs from '@emailjs/browser'
+
 
 function AdRegistration() {
-    var {cname}=useParams();
-    var [newRegistrationFn]=useAdRegistrationMutation();
+    var { cname, pname } = useParams();
+    var [newRegistrationFn] = useAdRegistrationMutation();
+    var ref = React.useRef()
+
+
     var adRegistrationForm = useFormik({
-        initialValues:{
-            name:'',
-            phone:'',
-            campaigner:cname,
-            date:(new Date()).getTime()
+        initialValues: {
+            name: '',
+            phone: '',
+            course: pname,
+            campaigner: cname,
+            email: '',
+            date: (new Date()).getTime()
         },
-        onSubmit:(values)=>{
-            // console.log(values)
-            newRegistrationFn(values).then(()=>{alert("Thanks for registration")})
+        onSubmit: (values) => {
+            newRegistrationFn(values).then(() => { alert("Thanks for registration") })
+            emailjs
+                .sendForm('service_l45qocw', 'template_ju8yijr', ref.current, {
+                    publicKey: 'GQ-d6vFeHDue6z6MD',
+                })
+                .then(
+                    () => {
+                        console.log('SUCCESS!');
+                    },
+                    (error) => {
+                        console.log('FAILED...', error.text);
+                    },
+                );
         }
+    
 
     })
-  return (
+return (
     <div>
         <h1>AdRegistration</h1>
-            <form onSubmit={adRegistrationForm.handleSubmit}>
-                <input type="text" name='name' placeholder='Enter Name' onChange={adRegistrationForm.handleChange}/>
-                <br />
-                <input type="text" name='phone' placeholder='Enter Phonenumber' onChange={adRegistrationForm.handleChange}/>
-                <br />
-               
-                <button>Add Campaign</button>
-            </form> 
+        <form onSubmit={adRegistrationForm.handleSubmit} ref={ref}>
+            <input type="text" name='name' placeholder='Enter Name' onChange={adRegistrationForm.handleChange} />
+            <br />
+            <input type="text" name='course' value={adRegistrationForm.values.course} placeholder='Enter Course' onChange={adRegistrationForm.handleChange} />
+            <br />
+            <input type="text" name='phone' placeholder='Enter Phonenumber' onChange={adRegistrationForm.handleChange} />
+            <br />
+            <input type="email" name='email' placeholder='Enter Email' onChange={adRegistrationForm.handleChange} />
+            <br />
+            <button type='submit'>Registration</button>
+        </form>
     </div>
-  )
+)
 }
 
 export default AdRegistration
