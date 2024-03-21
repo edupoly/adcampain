@@ -1,7 +1,7 @@
 import React from 'react'
 import Login from '../features/user/Login'
 
-function Home() {
+const Home=()=> {
   return (
     <div className='bg-light' style={{height:'500px'}}>
       <div className='container'>

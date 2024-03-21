@@ -3,9 +3,9 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik'
 import { useAddCampaignMutation } from '../../services/jsonApi';
 
-function CreateCampaign() {
-    var [addCampaignFn]=useAddCampaignMutation();
-    var createCampaignForm = useFormik({
+const CreateCampaign= ()=> {
+    let [addCampaignFn]=useAddCampaignMutation();
+    let createCampaignForm = useFormik({
         initialValues:{
             title:'',
             description:'',

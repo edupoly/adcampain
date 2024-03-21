@@ -28,41 +28,55 @@
   },
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "praveen@edupoly.com",
       "password": 123,
       "username": "praveen",
-      "role": "admin"
+      "role": "admin",
+      "photoURL": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "nani@edupoly.com",
-      "password": 123,
       "username": "nani",
-      "role": "campaigner"
+      "password": 123,
+      "phone": "",
+      "role": "campaigner",
+      "photoURL": ""
     },
     {
-      "id": 3,
+      "id": "3",
       "email": "balu@edupoly.com",
-      "password": 123,
       "username": "balu",
-      "role": "campaigner"
+      "password": 123,
+      "phone": "784564638",
+      "role": "campaigner",
+      "photoURL": ""
+    },
+    {
+      "id": "bd20",
+      "email": "murari.t2001@gmail.com",
+      "username": "Murari",
+      "password": "123",
+      "phone": "9346074674",
+      "role": "campaigner",
+      "photoURL": "blob:http://localhost:3000/23f7f719-2990-4d7e-a4fd-30fc2ef0569f"
     }
   ],
   "campaigns": [
     {
       "id": "d5b8",
-      "title": "reacths traubgub",
-      "description": "sdfsdf",
+      "title": "React Training",
+      "description": "In this practical hands-on training, you're going to master web development using ReactJS with this ultimate course that includes all the latest web development technologies.",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/240px-React_Logo_SVG.svg.png",
       "link": "http://localhost:3000/adRegistration",
       "date": 1707453776970
     },
     {
       "id": "12f2",
-      "title": "ANgular Training",
-      "description": "sdkfjh",
-      "imgUrl": "https://en.wikipedia.org/wiki/AngularJS#/media/File:AngularJS_logo.svg",
+      "title": "Angular Training",
+      "description": "In this practical hands-on training, you're going to master web development using Angular with this ultimate course that includes all the latest web development technologies.",
+      "imgUrl": "https://js.devexpress.com/Content/Images/Frameworks/Angular.png",
       "link": "http://localhost:3000/adRegistration",
       "date": 1707456022908
     },
@@ -73,15 +87,108 @@
       "imgUrl": "https://technogeekscs.com/wp-content/uploads/2023/11/Java-training-institute-.jpg",
       "link": "http://localhost:3000/adRegistration",
       "date": 1707458556485
+    },
+    {
+      "id": "c824",
+      "title": "Python Fullstack Training",
+      "description": "Placement oriented indepth training on Python with Frontend",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3dvurwfqMolKjc2EBcoALj8L1nFWlSGtNF6yeu4ONXw&s",
+      "link": "http://localhost:3000/adRegistration",
+      "date": 1707473196072
     }
   ],
   "registrations": [
     {
       "id": "ff41",
-      "name": "naveen",
+      "name": "Naveen",
+      "phone": "3344",
+      "course": "React Training",
+      "campaigner": "balu",
+      "date": 1707456812234
+    },
+    {
+      "id": "ff42",
+      "name": "Naresh",
+      "phone": "3344",
+      "course": "React Training",
+      "campaigner": "nani",
+      "date": 1707456812234
+    },
+    {
+      "id": "ff413",
+      "name": "Murari",
+      "course": "Angular Training",
       "phone": "3344",
       "campaigner": "balu",
       "date": 1707456812234
+    },
+    {
+      "id": "ff43",
+      "name": "Sanjeeth",
+      "phone": "3344",
+      "campaigner": "balu",
+      "course": "Java Fullstack Training",
+      "date": 1707456812234
+    },
+    {
+      "id": "f455",
+      "name": "Pranay",
+      "phone": "78945625",
+      "campaigner": "balu",
+      "course": "React Training",
+      "date": 1707560362354
+    },
+    {
+      "id": "8f98",
+      "name": "Jasim",
+      "phone": "789453285",
+      "campaigner": "nani",
+      "course": "Java Fullstack Training",
+      "date": 1707560953241
+    },
+    {
+      "id": "9a8b",
+      "name": "Varma",
+      "phone": "946751548484",
+      "campaigner": "balu",
+      "course": "Python Fullstack Training",
+      "date": 1707723518811
+    },
+    {
+      "id": "89b3",
+      "name": "Sanju",
+      "phone": "5623566565",
+      "email": "sanjeethsinghthakur0090@gmail.com",
+      "campaigner": "balu",
+      "course": "React Training",
+      "date": 1707976990849
+    },
+    {
+      "id": "e0b0",
+      "name": "Murari",
+      "phone": "9346074674",
+      "email": "murari.t2001@gmail.com",
+      "campaigner": "balu",
+      "course": "React Training",
+      "date": 1707977288874
+    },
+    {
+      "id": "e420",
+      "name": "Murari",
+      "phone": "9346074674",
+      "email": "murari.xlteck@gmail.com",
+      "campaigner": "balu",
+      "course": "React Training",
+      "date": 1707977288874
+    },
+    {
+      "id": "15b7",
+      "name": "Jasim Mohammad",
+      "phone": "6300530399",
+      "email": "jasim127md@gmail.com",
+      "campaigner": "balu",
+      "course": "React Training",
+      "date": 1708064117213
     }
   ]
 }

@@ -14,38 +14,61 @@ import CampaignerDashboard from './features/dashboard/CampaignerDashboard';
 import Login from './features/user/Login';
 import CreateCampaign from './features/dashboard/CreateCampaign';
 import AdRegistration from './features/dashboard/AdRegistration';
+import AllCampaigns from './features/dashboard/AllCampaigns';
+import RegistrationDetails from './features/dashboard/RegistrationDetails';
+import Profile from './features/dashboard/Profile';
 
 const router = createBrowserRouter([
-{
-    path: "/",
-    element: <App></App>,
-    children:[
-        {
-            path:"/",
-            element:<Home/>
-        },
-        {
-            path:'/admindashboard',
-            element:<AdminDashboard></AdminDashboard>
-        },
-        {
-            path:'/campaignerdashboard',
-            element:<CampaignerDashboard/>
-        },
-        {
-            path:"/login",
-            element:<Login></Login>
-        },
-        {
-            path:"/createCampaign",
-            element:<CreateCampaign></CreateCampaign>
-        },
-        {
-            path:"/adRegistration/:cname",
-            element:<AdRegistration></AdRegistration>
-        }
-    ]
-},
+    {
+        path: "/",
+        element: <App></App>,
+        children: [
+            {
+                path: "/",
+                element: <Home />
+            },
+            {
+                path: '/admindashboard',
+                element: <AdminDashboard></AdminDashboard>
+            },
+            {
+                path: '/campaignerdashboard',
+                element: <CampaignerDashboard />,
+                children: [{
+                    path: "/campaignerdashboard",
+                    element: <AllCampaigns></AllCampaigns>
+                },
+                {
+                    path: "/campaignerdashboard/profile",
+                    element: <Profile></Profile>
+                },
+                {
+                    path: "/campaignerdashboard/registered",
+                    element: <RegistrationDetails></RegistrationDetails>
+                },
+                {
+                    path: "/campaignerdashboard/registered/:cname",
+                    element: <RegistrationDetails></RegistrationDetails>
+                }]
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/createCampaign",
+                element: <CreateCampaign></CreateCampaign>
+            },
+            {
+                path: "/adRegistration/:cname/:pname",
+                element: <AdRegistration></AdRegistration>
+            },
+            {
+                path: "/adRegistration",
+                element: <AdRegistration></AdRegistration>
+            }
+        ]
+    },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Provider store={store}><RouterProvider router={router} /></Provider>);

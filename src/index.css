@@ -1,0 +1,151 @@
+.camp-card{
+    list-style: none;
+    width: 25%;
+}
+.card{
+    height: auto;
+}
+.card-img-top{
+    height: 200px;
+}
+.card-text{
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+Link{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.card-bottom button{
+    width: 95%;
+    margin: 1%;
+}
+.breadcrumb-item{
+    color: black;
+    text-decoration: none;
+}
+.profile-pic{
+    border-radius: 50%;
+    border: 3px solid;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    transform: translate(-50%,-50%);
+    background-size: cover;
+}
+.dropdown-menu{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%,10%);
+}
+.profile-img{
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+.profile-img img{
+    height: 100px;
+    width: 100px;
+}
+.icon{
+    font-size: 50px;
+}
+.profile-img:hover #file-label{
+    display: block;
+    color: white;
+    
+}
+.profile-img:hover .img-bg{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: black;
+    opacity: 0.8;
+}
+#file,#file-label{
+    display: none;
+}
+b{
+    background-color: rgb(223, 222, 222);
+}
+.leaf{
+    border-radius: 90% 20% 90% 0%;
+    height: 90px;
+    width: 90px;
+    margin: 20px;
+    background: rgb(45, 138, 45);
+}
+.ready{
+    height: 50px;
+    width: 100px;
+    background-color: #ffd0b5;
+    border: 5px dashed brown;
+    margin: 5px;
+}
+.set{
+    height: 50px;
+    width: 50px;
+    border-radius: 10%;
+    background: pink;
+    border: 5px dotted brown;
+    margin: 5px;
+}
+.go{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 5px solid green;
+}
+@media(max-width:770px) {
+    .camp-card{
+        list-style: none;
+        width: 45%;
+    }
+    .card{
+        height: auto;
+    }
+    .card-img-top{
+        height: 150px;
+    }
+    .card-bottom button{
+        width: 95%;
+        margin: 1%;
+    }
+    .card-body{
+        padding-bottom: 0px;
+    }
+}
+@media(max-width:450px) {
+    .camp-card{
+        list-style: none;
+        width: 90%;
+    }
+    .card{
+        height: auto;
+    }
+    .card-img-top{
+        height: 150px;
+    }
+    .card-bottom button{
+        width: 95%;
+        margin: 1%;
+    }
+    .card-body{
+        padding-bottom: 0;
+    }
+}

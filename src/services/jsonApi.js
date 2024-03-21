@@ -9,6 +9,9 @@ export const jsonApi = createApi({
     checkUser: builder.query({
       query: (values) => `users/?username=${values.username}&password=${values.password}`,
     }),
+    checkExistingUser: builder.query({
+      query: (values) => `users/?email=${values}`,
+    }),
     getAllCampaings:builder.query({
       query:()=>`campaigns`
     }),
@@ -21,6 +24,15 @@ export const jsonApi = createApi({
         }
       }
     }),
+    addNewUser:builder.mutation({
+      query:(newUser)=>{
+        return {
+          method:"POST",
+          url:`/users`,
+          body:newUser
+        }
+      }
+    }),
     adRegistration:builder.mutation({
       query:(newregistration)=>{
         return {
@@ -29,10 +41,34 @@ export const jsonApi = createApi({
           body:newregistration
         }
       }
+    }),
+    updateProfile:builder.mutation({
+      query:(update)=>{
+        return {
+          method:"PUT",
+          url:`/users/${update.id}`,
+          body:update
+        }
+      }
+    }),
+    getRegisteredByCourseAndCampaigner:builder.query({
+      query:(values)=>{
+        console.log("values",values);
+        return {
+          url:`registrations/?campaigner=${values.username}&course=${values.course}`
+        }
+      }
     })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useAdRegistrationMutation,useLazyCheckUserQuery,useAddCampaignMutation,useGetAllCampaingsQuery } = jsonApi
+export const {  useAdRegistrationMutation,
+                useAddNewUserMutation,
+                useUpdateProfileMutation,
+                useLazyCheckExistingUserQuery,
+                useLazyGetRegisteredByCourseAndCampaignerQuery,
+                useLazyCheckUserQuery,
+                useAddCampaignMutation,
+                useGetAllCampaingsQuery } = jsonApi
