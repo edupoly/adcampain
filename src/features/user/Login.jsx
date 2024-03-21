@@ -22,7 +22,7 @@ function Login() {
         onSubmit:(values)=>{
             // console.log(values)
             checkuser(values).then((res)=>{
-                console.log("login res",res)
+                console.log(res);
                 if(res.data.length===0){
                     alert("Please enter valid credentials")
                     loginForm.setErrors({credentials:'notvalid'})
@@ -34,7 +34,7 @@ function Login() {
                 {
                     navigate('/admindashboard')
                 }
-                else if(res.data[0]?.role==='campaigner')
+                else if(res.data[0]?.role==='user')
                 {
                     navigate('/campaignerdashboard')
                 }

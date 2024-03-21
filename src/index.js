@@ -12,7 +12,7 @@ import Home from './shared/Home';
 import AdminDashboard from './features/dashboard/AdminDashboard';
 import CampaignerDashboard from './features/dashboard/CampaignerDashboard';
 import Login from './features/user/Login';
-import CreateCampaign from './features/dashboard/CreateCampaign';
+import CreateCampaign from './features/dashboard/CreateNewLoan';
 import AdRegistration from './features/dashboard/AdRegistration';
 
 const router = createBrowserRouter([

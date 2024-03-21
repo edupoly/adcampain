@@ -1,12 +1,10 @@
 import React from 'react'
 import * as Yup from 'yup';
 import { useFormik } from 'formik'
-import { useAdRegistrationMutation, useAddCampaignMutation } from '../../services/jsonApi';
 import { useParams } from 'react-router-dom';
 
 function AdRegistration() {
     var {cname}=useParams();
-    var [newRegistrationFn]=useAdRegistrationMutation();
     var adRegistrationForm = useFormik({
         initialValues:{
             name:'',
@@ -15,8 +13,7 @@ function AdRegistration() {
             date:(new Date()).getTime()
         },
         onSubmit:(values)=>{
-            // console.log(values)
-            newRegistrationFn(values).then(()=>{alert("Thanks for registration")})
+            console.log(values)
         }
 
     })

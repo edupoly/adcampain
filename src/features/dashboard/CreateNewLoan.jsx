@@ -1,10 +1,8 @@
 import React from 'react'
 import * as Yup from 'yup';
 import { useFormik } from 'formik'
-import { useAddCampaignMutation } from '../../services/jsonApi';
 
 function CreateCampaign() {
-    var [addCampaignFn]=useAddCampaignMutation();
     var createCampaignForm = useFormik({
         initialValues:{
             title:'',
@@ -14,9 +12,7 @@ function CreateCampaign() {
             date:(new Date()).getTime()
         },
         onSubmit:(values)=>{
-            addCampaignFn(values).then((res)=>{
-                console.log(res)
-            })
+           console.log(values);
         }
 
     })

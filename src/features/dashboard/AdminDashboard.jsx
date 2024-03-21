@@ -6,7 +6,7 @@ function AdminDashboard() {
     <div className='bg-light'>
         <div className='container'>
             <h1>Admin Dashboard</h1>
-            <Link className='btn btn-success' to="/createCampaign">+ Create Campaign</Link>
+            <Link className='btn btn-success' to="/createCampaign">+ Create New Loan</Link>
         </div>
     </div>
   )
